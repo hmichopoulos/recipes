@@ -9,6 +9,6 @@ for (( i=0;i<$ELEMENTS;i++)); do
     service ${args[${i}]} stop
 done 
 
-for (( i=$ELEMENTS-1;i>0;i--)); do
+for (( i=$ELEMENTS-1;i>=0;i--)); do
     service ${args[${i}]} start
 done 
