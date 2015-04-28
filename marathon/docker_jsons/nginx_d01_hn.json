@@ -1,0 +1,13 @@
+{
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "hmichopoulos/nginx"
+    }
+  },
+  "id": "ngingx-d01",
+  "instances": 1,
+  "cpus": 0.5,
+  "mem": 128,
+  "ports": [0]
+}
