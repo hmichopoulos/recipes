@@ -1,0 +1,13 @@
+{
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "hmichopoulos/spring_boot_dummy:2"
+    }
+  },
+  "id": "spring-boot-dummy-d02",
+  "instances": 3,
+  "cpus": 0.5,
+  "mem": 128,
+  "ports": [0,0]
+}
