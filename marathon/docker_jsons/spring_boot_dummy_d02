@@ -2,7 +2,7 @@
   "container": {
     "type": "DOCKER",
     "docker": {
-      "image": "hmichopoulos/spring_boot_dummy:2"
+      "image": "hmichopoulos/spring-boot-dummy:2"
     }
   },
   "id": "spring-boot-dummy-d02",
