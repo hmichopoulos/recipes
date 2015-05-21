@@ -8,6 +8,6 @@
   "id": "spring-boot-dummy-d02",
   "instances": 3,
   "cpus": 0.5,
-  "mem": 128,
+  "mem": 256,
   "ports": [0,0]
 }
