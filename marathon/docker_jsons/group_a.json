@@ -1,0 +1,31 @@
+{
+  "id" : "group-a",
+  "apps":[
+    {
+      "id": "spring-boot-dummy-d02.1",
+      "container": {
+        "type": "DOCKER",
+        "docker": {
+          "image": "hmichopoulos/spring-boot-dummy:2"
+        }
+      },
+      "instances": 1,
+      "cpus": 0.5,
+      "mem": 256,
+      "ports": [0, 0]
+    },
+    {
+      "id": "spring-boot-dummy-d02.2",
+      "container": {
+        "type": "DOCKER",
+        "docker": {
+          "image": "hmichopoulos/spring-boot-dummy:2"
+        }
+      },
+      "instances": 1,
+      "cpus": 0.5,
+      "mem": 256,
+      "ports": [0, 0]
+    }
+  ]
+}
