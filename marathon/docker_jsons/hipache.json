@@ -1,0 +1,42 @@
+{
+  "id" : "/hipache",
+  "apps":[
+    {
+      "id": "/hipache/backend",
+      "container": {
+        "type": "DOCKER",
+        "docker": {
+          "image": "hipache:0.2.8",
+          "network": "BRIDGE",
+          "portMappings": [
+            { "containerPort": 80, "hostPort": 0, "servicePort": 80, "protocol": "tcp" },
+            { "containerPort": 6379, "hostPort": 0, "servicePort": 6379, "protocol": "tcp" }
+          ]
+        }
+      },
+      "instances": 1,
+      "cpus": 0.5,
+      "mem": 256
+    },
+    {
+      "id": "/hipache/ui",
+      "container": {
+        "type": "DOCKER",
+        "docker": {
+          "image": "dhrp/airfield"
+        }
+      },
+      "dependencies": ["/hipache/backend"],
+      "env": {
+        "REDIS_PORT": 6379,
+        "REDIS_HOST": "localhost",
+        "AIRFIELD_USER": "user",
+        "AIRFIELD_PASS": "pass"
+      },
+      "instances": 1,
+      "cpus": 0.5,
+      "mem": 256,
+      "ports": [ 3000 ]
+    }
+  ]
+}
