@@ -4,5 +4,31 @@ http://getbootstrap.com bootstrap.min.js
 AngularJS == Client Side JSP
 
 A Directive is a marker on an HTML tag that tells Angular to run or reference some JavaScript code.
+Also, Directives allows us to HTML that expresses the behaviour of our application.
+"Expressiveness is the real power of writing Directives"
 
-Directives: ng-controller
+Directives can also be used to:
+* define a custom tag or attribute which is expanded or replaced
+* include Controller logic, if needed
+* Express complex UI
+* Call event and register event handlers
+* Reuse common components
+
+A Module is a piece of an AngularJS application. Modules can use Modules. Modules == application Components.
+
+An Expression is way to insert dynamic values into our HTML.  
+http://docs.angularjs.org/guide/expression
+
+Filter is 
+
+
+Controllers are where we define our application's behaviour by defining functions and values.
+
+Directives: ng-app, ng-controller, ng-show (if property not exists, is tread as false), ng-hide, ng-repeat, ng-src (for images), ng-click, ng-init, ng-class, ng-model, ng-submit, ng-include
+
+Expressions: numerical operations, string operations, 
+
+Filters: currency, date, uppercase, lowercase, limitTo, orderBy
+
+var app = angular.module('store', []);  
+// store is Application Name, used in the ng-app directive and the [] is the dependencies
