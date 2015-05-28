@@ -1,0 +1,8 @@
+http://angularjs.org angular.min.js
+http://getbootstrap.com bootstrap.min.js
+
+AngularJS == Client Side JSP
+
+A Directive is a marker on an HTML tag that tells Angular to run or reference some JavaScript code.
+
+Directives: ng-controller
