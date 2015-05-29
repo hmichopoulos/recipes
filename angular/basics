@@ -24,7 +24,9 @@ Filter is
 
 Controllers are where we define our application's behaviour by defining functions and values.
 
-Directives: ng-app, ng-controller, ng-show (if property not exists, is tread as false), ng-hide, ng-repeat, ng-src (for images), ng-click, ng-init, ng-class, ng-model, ng-submit, ng-include
+Directives: ng-app, ng-controller, ng-show (if property not exists, is tread as false), ng-hide, ng-repeat, ng-src (for images), ng-click, ng-init, ng-class, ng-model, ng-submit, ng-include, ng-href, ng-if
+
+Directives inherit parent's scope. Isolate scope by setting scope : {}
 
 Expressions: numerical operations, string operations, 
 
