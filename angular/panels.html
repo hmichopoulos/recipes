@@ -1,0 +1,51 @@
+<section>
+    <ul class="nav nav-pills">
+        <li ng-class="{ active:tabController.isSet(1) }"><a href ng-click="tabController.setTab(1)">Personal Info</a></li>
+        <li ng-class="{ active:tabController.isSet(2) }"><a href ng-click="tabController.setTab(2)">Pics</a></li>
+        <li ng-class="{ active:tabController.isSet(3) }"><a href ng-click="tabController.setTab(3)">Habbits</a></li>
+    </ul>
+    <div class="panel" ng-show="tabController.isSet(1)">
+        <h4>Personal Info</h4>
+        {{s.user}}
+    </div>
+    <div class="panel" ng-show="tabController.isSet(2)">
+        <h4>Pics</h4>
+        <div ng-controller="GalleryController as gC">
+            <div class="gallery">
+                <div class="img-wrap">
+                    <img ng-src="{{s.pics[gC.current]}}" />
+                </div>
+            </div>
+
+            <ul class="list-inline thumbs">
+                <li class="small-image thumbnail" ng-repeat="pic in s.pics">
+                    <img ng-src="{{pic}}" width="40" ng-click="gC.setCurrent($index)"/>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="panel" ng-show="tabController.isSet(3)">
+        <h4>Habbits</h4>
+        <form name="commentForm" ng-controller="CommentFormController as cfCtrl" ng-submit="commentForm.$valid && cfCtrl.addComment(s)" novalidate>
+            <blockquote ng-include="'comment-view.html'">
+                <b>Stars: {{cfCtrl.comment.stars}}</b>
+                {{cfCtrl.comment.body}}
+                <cite>by {{cfCtrl.comment.author}}</cite>
+            </blockquote>
+            <select ng-model="cfCtrl.comment.stars" required>
+                <option value="1">1 star</option>
+                <option value="2">2 stars</option>
+                <option value="3">3 stars</option>
+                <option value="4">4 stars</option>
+                <option value="5">5 stars</option>
+            </select>
+            <textarea ng-model="cfCtrl.comment.body" required></textarea>
+            by: <input ng-model="cfCtrl.comment.author" type="email" required/>
+            <div>form is {{commentForm.$valid}}</div>
+            <input type="submit" value="Submit"/>
+        </form>
+
+        <blockquote ng-repeat="comment in s.comments" ng-include="'comment-view.html'"></blockquote>
+    </div>
+</section>
