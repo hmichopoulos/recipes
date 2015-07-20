@@ -1,0 +1,20 @@
+{
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "d.r.cc/wordpress:latest",
+      "network": "BRIDGE",
+      "portMappings": [
+        { "containerPort": 80, "hostPort": 0 }
+      ]
+    }
+  },
+  "id": "wp-web2",
+  "instances": 1,
+  "cpus": 0.3,
+  "mem": 100,
+  "env": {
+    "WORDPRESS_DB_PASSWORD": "xxx",
+    "WORDPRESS_DB_HOST": "192.168.11.100:31000"
+  }
+}
